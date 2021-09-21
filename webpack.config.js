@@ -12,25 +12,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.s?css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
-      // {
-      //   test: /\.(scss|css)$/,
-      //   use: [
-      //     MiniCssExtractPlugin.loader,
-      //     {
-      //       loader: 'css-loader',
-      //       options: {
-      //         importLoaders: 2,
-      //         sourceMap: false,
-      //         modules: true,
-      //       },
-      //     },
-      //     'postcss-loader',
-      //     'sass-loader',
-      //   ],
-      // },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -59,6 +43,6 @@ module.exports = {
   ],
   devServer: {
     open: true,
-    port: 9000,
+    port: 9003,
   },
 }
